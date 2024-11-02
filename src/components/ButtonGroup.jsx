@@ -1,16 +1,12 @@
-const ButtonGroup = ({ setPokemonId }) => {
+const ButtonGroup = ({ setPokemonId, pokemonId }) => {
   //press next and pokemonData goes to the next object
   const handleNext = () => {
     setPokemonId((currentId) => currentId + 1);
   };
   const handlePrevious = () => {
-    setPokemonId((currentId) => {
-      if (currentId !== 1) {
-        return currentId - 1;
-      } else {
-        return currentId;
-      }
-    });
+    if (pokemonId !== 1) {
+      setPokemonId((currentId) => currentId - 1);
+    }
   };
   return (
     <div className="flex  gap-5">

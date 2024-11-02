@@ -9,7 +9,7 @@ const Card = ({ pokemonData, isLoading, error }) => {
         <>
           <img className="max-w-96  w-full" src={pokemonData.sprite} />
           <h3 className="text-xl font-semibold">
-            {pokemonData.pokemonName.toUpperCase()}
+            {pokemonData?.pokemonName?.toUpperCase()}
           </h3>
           <p className="text-lg font-semibold">No. {pokemonData.id}</p>
         </>
